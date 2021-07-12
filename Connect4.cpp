@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include<windows.h>
 
 using namespace std;
@@ -94,8 +94,12 @@ void DisplayBoard(char board[20][40], int n, int m)
         cout << "|";
         for (int j = 0; j < m; j++)
         {
+            if (board[i][j] == 0)
+            {
+                cout << "" << board[i][j] << " ";
+            }
             cout << board[i][j];
-            if (j < m - 1)cout << "|";
+            if (j < m - 1)cout << " | ";
         }
         cout << "|\n";
     }
@@ -166,6 +170,10 @@ int main()
         cout << "|";
         for (int j = 0; j < m; j++)
         {
+            if (board[i][j] == 0)
+            {
+                cout << "" << board[i][j] << " ";
+            }
             cout << board[i][j];
             if (j < m - 1)cout << "|";
         }
